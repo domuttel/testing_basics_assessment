@@ -40,18 +40,19 @@ function modeScore(array) {
     var mode = [];
     var max = 0;
     for (var i in array) {
-        if (!(array[i] in counter))
-            counter[array[i]] = 0;
-        counter[array[i]]++;
-
-        if (counter[array[i]] == max)
+        if (!(array[i] in counter)){
+            counter[array[i]] = 1;
+        } else {
+          counter[array[i]]++;
+        }
+        if (counter[array[i]] == max) {
             mode.push(array[i]);
-        else if (counter[array[i]] > max) {
+        } else if (counter[array[i]] > max) {
             max = counter[array[i]];
             mode = [array[i]];
         }
     }
-    return Number(mode);
+    return mode;
 }
 
 // array.reduce(function(previousValue, currentValue, index, array){

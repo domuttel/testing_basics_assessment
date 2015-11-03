@@ -27,8 +27,8 @@ var medianScore = require('./grader').medianScore;
 var modeScore = require('./grader').modeScore;
     describe('modeScore()', function(){
     it('finds the most occuring element in a given array', function(){
-      expect(modeScore([1, 1, 1, 2, 1, 2, 4, 5, 6, 7, 2, 1])).toEqual(1);
-      expect(modeScore([3, 5, 7, 12, 13, 14, 21, 23, 23, 23, 23, 29, 40, 56])).toEqual(23);
+      expect(modeScore([1, 1, 1, 2, 1, 2, 4, 5, 6, 7, 2, 1])).toEqual([1]);
+      expect(modeScore([3, 5, 7, 12, 13, 14, 21, 23, 23, 23, 23, 29, 40, 56])).toEqual([23]);
       expect(modeScore([3, 3, 3, 90, 4, 2, 6, 90, 90, 2, 1, 0])).toEqual([3, 90]);
     });
   });
